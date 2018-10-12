@@ -21,3 +21,8 @@ build:
     - mvn --version    
     - gradle --version
     - ant -version
+    - java --version
+    - node -version
+    - ruby -v
+    - python --version
+    
