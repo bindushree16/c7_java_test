@@ -23,6 +23,5 @@ build:
     - ant -version
     - java --version
     - node -v
-    - ruby -v
     - python --version
     
