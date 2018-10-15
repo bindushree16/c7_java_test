@@ -1,11 +1,11 @@
 language: java
   
 jdk:
-  - openjdk7
+  #- openjdk7
   - openjdk8
-  - openjdk9 
+  #- openjdk9 
   - openjdk10
-  - oraclejdk10
+  #- oraclejdk10
   - oraclejdk8
  
 build:
@@ -21,7 +21,4 @@ build:
     - mvn --version    
     - gradle --version
     - ant -version
-    - java --version
-    - node -v
-    - python --version
-    
+
