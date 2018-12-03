@@ -8,7 +8,7 @@ jdk:
   - oraclejdk8
   - oraclejdk11
  
- runtime:
+runtime:
   nodePool: CentOS_7 node pool
     
   ci:
