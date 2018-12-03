@@ -8,12 +8,8 @@ jdk:
   - oraclejdk8
   - oraclejdk11
  
-build:
-
-  pre_ci_boot:
-    image_name: drydock/c7javall
-    image_tag: master
-    pull: true
+ runtime:
+  nodePool: CentOS_7 node pool
     
   ci:
     - echo $JAVA_HOME
