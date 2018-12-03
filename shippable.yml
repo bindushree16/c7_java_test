@@ -9,7 +9,7 @@ jdk:
   - oraclejdk11
  
 runtime:
-  nodePool: CentOS_7 node pool
+  nodePool: dynamic__x86_64__CentOS_7__c4_large
 
 build:  
   ci:
