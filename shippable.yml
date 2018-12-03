@@ -10,7 +10,7 @@ jdk:
  
 build: 
   pre_ci_boot:
-    image_name: drydock/c7cppall
+    image_name: drydock/c7javall
     image_tag: master
     pull: true
     
