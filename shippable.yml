@@ -9,12 +9,14 @@ jdk:
   - oraclejdk11
  
 runtime:
-  nodePool: dynamic__x86_64__CentOS_7__c4_large
-    
-ci:
-  - echo $JAVA_HOME
-  - echo $PATH
-  - java -version
-  - echo $SHIPPABLE_JDK_VERSION
-  - mvn --version    
-  - gradle --version
+  nodePool: CentOS_7 node pool
+
+build:  
+  ci:
+    - echo $JAVA_HOME
+    - echo $PATH
+    - java -version
+    - echo $SHIPPABLE_JDK_VERSION
+    - mvn --version    
+    - gradle --version
+    - ant -version
