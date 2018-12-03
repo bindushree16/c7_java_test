@@ -8,18 +8,14 @@ jdk:
   - oraclejdk8
   - oraclejdk11
  
-build: 
-  pre_ci_boot:
-    image_name: drydock/c7javall
-    image_tag: master
-    pull: true
+runtime:
+  nodePool: dynamic__x86_64__CentOS_7__c4_large
     
-  ci:
-    - echo $JAVA_HOME
-    - echo $PATH
-    - java -version
-    - echo $SHIPPABLE_JDK_VERSION
-    - mvn --version    
-    - gradle --version
-    - ant -version
-
+ci:
+  - echo $JAVA_HOME
+  - echo $PATH
+  - java -version
+  - echo $SHIPPABLE_JDK_VERSION
+  - mvn --version    
+  - gradle --version
+  - ant -version
