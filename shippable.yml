@@ -16,7 +16,7 @@ build:
     - java -version
     - mvn --version
     - echo $SHIPPABLE_JDK_VERSION
-    - if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then     	sdk use ant 1.9.9        sdk use gradle 4.10.3      fi
+    - if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then sdk use ant 1.9.9; sdk use gradle 4.10.3; fi
     - gradle --version
     - ant -version 
     
