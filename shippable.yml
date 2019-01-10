@@ -14,14 +14,13 @@ runtime:
 build:
   ci:
     - java -version
-#     - source /etc/drydock/.env
-    - export PATH="$PATH:/root/.sdkman/candidates/gradle/current/bin"
-    - mvn --version  
+    - mvn --version
+    - echo $SHIPPABLE_JDK_VERSION
     - |
-       if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then
-        sdk use ant 1.9.9
+    	if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then
+      	sdk use ant 1.9.9
         sdk use gradle 4.10.3
-       fi
+      fi
     - gradle --version
     - ant -version 
     
