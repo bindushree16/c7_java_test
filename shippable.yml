@@ -13,10 +13,12 @@ runtime:
 
 build:  
   ci:
-    - echo $JAVA_HOME
-    - echo $PATH
-    - java -version
-    - echo $SHIPPABLE_JDK_VERSION
-    - mvn --version    
-    - gradle --version
-    - ant -version
+   - java -version
+   - mvn --version
+   - |
+     if [ "$SHIPPABLE_JDK_VERSION" == "openjdk7" ] || [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then
+       sdk use ant 1.9.9
+       sdk use gradle 4.10.3
+     fi
+   - ant -version
+   - gradle --version 
